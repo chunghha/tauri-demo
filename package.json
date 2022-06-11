@@ -9,10 +9,11 @@
     "preview": "vite preview",
     "tauri": "tauri",
     "format": "prettier --write \"**/*.{ts, vue}\"",
+    "format:rs": "cargo fmt --manifest-path src-tauri/Cargo.toml",
     "lint": "eslint . --fix --ext .js,.jsx,.ts,.tsx,.vue",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "check:all": "yarn lint && yarn format && yarn coverage"
+    "check:all": "yarn lint && yarn format && yarn format:rs && yarn coverage"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.0-rc.6",

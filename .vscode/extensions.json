@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "bradlc.vscode-tailwindcss",
+    "ZixuanChen.vitest-explorer"
+  ]
+}

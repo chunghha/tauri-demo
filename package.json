@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.0-rc.6",
+    "@vueuse/core": "^8.6.0",
+    "pinia": "^2.0.14",
     "vue": "^3.2.37"
   },
   "devDependencies": {

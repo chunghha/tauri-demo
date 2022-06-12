@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "vite",
+    "debug:rs": "RUST_BACKTRACE=1 tauri dev",
     "build": "vue-tsc --noEmit && vite build",
     "build:tauri": "tauri build",
     "preview": "vite preview",

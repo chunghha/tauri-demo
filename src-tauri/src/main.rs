@@ -1,6 +1,14 @@
 #![cfg_attr(all(not(debug_assertions), target_os = "windows"), windows_subsystem = "windows")]
 
 use tauri::Manager;
+use users::{get_current_uid, get_user_by_uid};
+
+#[tauri::command]
+fn get_user() -> String {
+  let user = get_user_by_uid(get_current_uid()).unwrap();
+
+  return user.name().to_os_string().into_string().unwrap();
+}
 
 fn main() {
   tauri::Builder::default()
@@ -20,6 +28,8 @@ fn main() {
       });
       Ok(())
     })
+    // This is where you pass in your commands
+    .invoke_handler(tauri::generate_handler![get_user])
     .run(tauri::generate_context!())
     .expect("failed to run app");
 }

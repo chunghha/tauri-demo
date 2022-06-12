@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { invoke } from '@tauri-apps/api/tauri';
 import { useNow } from '@vueuse/core';
-import HelloWorld from './components/HelloWorld.vue';
 import { useUserStore } from './store/user';
 
 const now = useNow();
@@ -14,13 +13,30 @@ invoke('get_user').then(_user => {
 
 <template>
   <div data-theme="rosepine">
-    <div class="grid place-items-center h-screen m-4 pb-16">
-      <div class="justify-self-end">
-        <div class="badge badge-lg badge-info gap-2">{{ userPod.user }}</div>
-        <div class="badge badge-lg badge-success gap-2">{{ now.toLocaleTimeString() }}</div>
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-neutral rounded-box w-52">
+            <li>
+              <router-link to="/">Home</router-link>
+            </li>
+            <li>
+              <router-link to="/about">About</router-link>
+            </li>
+          </ul>
+        </div>
       </div>
-      <img alt="Vue logo" src="./assets/logo.png" />
-      <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+      <div class="navbar-end">
+        <button class="btn btn-ghost">{{ userPod.user }}</button>
+        <button class="btn btn-ghost">{{ now.toLocaleTimeString() }}</button>
+      </div>
     </div>
+    <router-view></router-view>
   </div>
 </template>

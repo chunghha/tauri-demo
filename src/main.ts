@@ -1,3 +1,6 @@
+import '@fontsource/montserrat';
+import '@fontsource/roboto';
+import '@fontsource/space-mono';
 import { MotionPlugin } from '@vueuse/motion';
 import { createPinia } from 'pinia';
 import { createApp } from 'vue';

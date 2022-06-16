@@ -25,6 +25,9 @@
     "vue-router": "^4.0.16"
   },
   "devDependencies": {
+    "@fontsource/montserrat": "^4.5.11",
+    "@fontsource/roboto": "^4.5.7",
+    "@fontsource/space-mono": "^4.5.8",
     "@tailwindcss/typography": "^0.5.2",
     "@tauri-apps/cli": "^1.0.0-rc.14",
     "@typescript-eslint/eslint-plugin": "^5.28.0",

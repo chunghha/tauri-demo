@@ -34,7 +34,7 @@ invoke('get_user').then(_user => {
       </div>
       <div class="navbar-end">
         <button class="btn btn-ghost">{{ userPod.user }}</button>
-        <button class="btn btn-ghost">{{ now.toLocaleTimeString() }}</button>
+        <button class="btn btn-ghost font-space-mono text-xl">{{ now.toLocaleTimeString() }}</button>
       </div>
     </div>
     <router-view></router-view>

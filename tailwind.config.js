@@ -6,6 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'montserrat': ['montserrat', 'serif'],
+      'roboto': ['roboto', 'sans-serif'],
+      'space-mono': ['space-mono']
+    },
   },
   important: '#app',
   plugins: [require("@tailwindcss/typography"), require("daisyui")],

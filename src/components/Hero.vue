@@ -17,4 +17,11 @@ const count = ref(0);
       </div>
     </div>
   </div>
+  <div class="toast toast-end" v-if="count > 5">
+    <div class="alert alert-success">
+      <div class="font-montserrat">
+        <span>You've clicked too many times.</span>
+      </div>
+    </div>
+  </div>
 </template>

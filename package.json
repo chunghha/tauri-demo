@@ -2,6 +2,9 @@
   "name": "tauri-demo",
   "private": true,
   "version": "0.1.0",
+  "engines": {
+    "node": ">=16.17.0"
+  },
   "scripts": {
     "dev": "vite",
     "debug:rs": "RUST_BACKTRACE=1 tauri dev",
@@ -18,34 +21,36 @@
   },
   "dependencies": {
     "@tauri-apps/api": "^1.0.2",
-    "@vueuse/core": "^8.9.3",
+    "@vueuse/core": "^9.1.1",
     "@vueuse/motion": "^2.0.0-beta.12",
-    "pinia": "^2.0.16",
+    "pinia": "^2.0.21",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.1"
+    "vue-router": "^4.1.5"
   },
   "devDependencies": {
-    "@fontsource/montserrat": "^4.5.11",
-    "@fontsource/roboto": "^4.5.7",
-    "@fontsource/space-mono": "^4.5.8",
+    "@fontsource/fira-mono": "^4.5.9",
+    "@fontsource/inter": "^4.5.12",
+    "@fontsource/poppins": "^4.5.9",
     "@tailwindcss/typography": "^0.5.4",
-    "@tauri-apps/cli": "^1.0.4",
-    "@typescript-eslint/eslint-plugin": "^5.30.6",
-    "@typescript-eslint/parser": "^5.30.6",
-    "@vitejs/plugin-vue": "^3.0.0",
-    "autoprefixer": "^10.4.7",
-    "c8": "^7.11.3",
-    "daisyui": "^2.19.0",
-    "eslint": "^8.19.0",
+    "@tauri-apps/cli": "^1.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vitest/coverage-c8": "^0.22.1",
+    "autoprefixer": "^10.4.8",
+    "c8": "^7.12.0",
+    "daisyui": "^2.24.0",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-vue": "^9.2.0",
-    "postcss": "^8.4.14",
+    "postcss": "^8.4.16",
     "prettier": "^2.7.1",
-    "tailwindcss": "^3.1.6",
-    "typescript": "~4.7.4",
-    "vite": "^3.0.0",
-    "vitest": "^0.18.1",
-    "vue-tsc": "^0.38.5"
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.1.8",
+    "typescript": "~4.8.2",
+    "vite": "^3.0.9",
+    "vitest": "^0.22.1",
+    "vue-tsc": "^0.40.2"
   }
 }

@@ -13,7 +13,7 @@ const xxxl = breakpoints['2xl'];
 </script>
 
 <template>
-  <h1 class="text-center text-warning font-montserrat">about page</h1>
+  <h1 class="text-center text-warning font-poppins">about page</h1>
   <div class="divider"></div>
   <div v-motion :initial="{ y: 300, opacity: 0, scale: 1 }" :enter="{
     y: 0, opacity: 1, transition: {

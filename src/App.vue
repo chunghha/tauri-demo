@@ -12,8 +12,8 @@ invoke('get_user').then(_user => {
 </script>
 
 <template>
-  <div data-theme="rosepine">
-    <div class="navbar bg-base-100">
+  <div data-theme="dawn">
+    <div class="navbar bg-base-100 shadow-md">
       <div class="navbar-start">
         <div class="dropdown">
           <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -34,9 +34,11 @@ invoke('get_user').then(_user => {
       </div>
       <div class="navbar-end">
         <button class="btn btn-ghost">{{ userPod.user }}</button>
-        <button class="btn btn-ghost font-space-mono text-xl">{{ now.toLocaleTimeString() }}</button>
+        <button class="btn btn-ghost font-fira-mono text-lg">{{ now.toLocaleTimeString() }}</button>
       </div>
     </div>
-    <router-view></router-view>
+    <div class="mt-2">
+      <router-view></router-view>
+    </div>
   </div>
 </template>

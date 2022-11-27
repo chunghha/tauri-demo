@@ -3,6 +3,13 @@
 use tauri::Manager;
 use users::{get_current_uid, get_user_by_uid};
 
+mod fibonacci;
+
+#[tauri::command]
+fn get_fib(s_number: String) -> String {
+  return fibonacci::get_fibonacci(s_number).into();
+}
+
 #[tauri::command]
 fn get_user() -> String {
   let user = get_user_by_uid(get_current_uid()).unwrap();
@@ -29,7 +36,7 @@ fn main() {
       Ok(())
     })
     // This is where you pass in your commands
-    .invoke_handler(tauri::generate_handler![get_user])
+    .invoke_handler(tauri::generate_handler![get_fib, get_user])
     .run(tauri::generate_context!())
     .expect("failed to run app");
 }

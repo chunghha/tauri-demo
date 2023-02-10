@@ -30,10 +30,24 @@ trait IFib {
 
 impl IFib for Fib {
   fn fib(n: usize) -> usize {
-    match n {
-      0 => 0,
-      1 => 1,
-      _ => Fib::fib(n - 1) + Fib::fib(n - 2),
+    if n < 2 {
+      1
+    } else {
+      // the combinatorial definition
+      let mut memo = [1, 1];
+      let mut n = n - 2;
+
+      loop {
+        let [a, b] = memo;
+        let c = a + b;
+
+        if n == 0 {
+          return c;
+        }
+
+        memo = [b, c];
+        n -= 1;
+      }
     }
   }
 }

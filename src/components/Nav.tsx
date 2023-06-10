@@ -8,7 +8,7 @@ const Nav: Component = () => {
   return (
     <div class="navbar bg-neutral shadow-lg mb-4">
       <div class="navbar-start">
-        <div class="dropdown">
+        <div class="dropdown z-[1000]">
           <Hamburger />
           <ul
             tabindex="0"

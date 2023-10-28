@@ -8,7 +8,10 @@ const fetchCountries = async () => (await fetch('https://restcountries.com/v3.1/
 const queryClient = new QueryClient()
 
 const CountryContainer: Component = () => {
-  const query = createQuery(() => ['countryAPI'], fetchCountries)
+  const query = createQuery(() => ({
+    queryKey: ['countryAPI'],
+    queryFn: async () => await fetchCountries()
+  }))
 
   return (
     <div>

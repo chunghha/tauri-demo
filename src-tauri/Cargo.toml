@@ -1,6 +1,6 @@
 [package]
 name = "app"
-version = "0.3.0"
+version = "0.4.1"
 description = "A Tauri App"
 authors = ["you"]
 license = ""
@@ -15,9 +15,10 @@ rust-version = "1.73"
 tauri-build = { version = "1.5.0", features = [] }
 
 [dependencies]
-serde_json = "1.0.107"
-serde = { version = "1.0.190", features = ["derive"] }
-tauri = { version = "1.5.2", features = ["api-all"] }
+serde_json = "1.0.108"
+serde = { version = "1.0.193", features = ["derive"] }
+tauri = { version = "1.5.3", features = ["api-all"] }
+tauri-utils = "1.5.1"
 users = "0.11.0"
 
 [features]

@@ -10,6 +10,7 @@ export default defineConfig({
 		target: 'esnext'
 	},
 	define: {
+		// eslint-disable-next-line node/prefer-global/process
 		APP_VERSION: JSON.stringify(process.env.npm_package_version)
 	}
 });

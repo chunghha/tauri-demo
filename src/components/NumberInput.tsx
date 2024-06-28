@@ -2,7 +2,7 @@ import { invoke } from '@tauri-apps/api'
 import type { Component } from 'solid-js'
 import { createMemo } from 'solid-js'
 import { fib, setFib, setSrcNumber, srcNumber } from '../stores/fib'
-import { SafeAny } from '../types'
+import type { SafeAny } from '../types'
 
 const NumberInput: Component = () => {
   function getFibonacci(event: SafeAny) {
